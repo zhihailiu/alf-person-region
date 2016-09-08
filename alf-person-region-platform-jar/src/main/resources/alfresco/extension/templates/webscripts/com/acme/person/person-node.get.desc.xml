@@ -1,0 +1,7 @@
+<webscript>
+	<shortname>Person Node ID</shortname>
+	<description>given a username, get sys:node-uuid of cm:person object</description>
+	<url>/person-node/{username}</url>
+	<format default="json">extension</format>
+	<authentication>user</authentication>
+</webscript>

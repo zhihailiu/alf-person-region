@@ -1,20 +1,37 @@
 <extension>
-  <modules>
-    <module>
-      <id>alf-person-region-share-jar - Example Aikau Widgets</id>
-      <version>1.0</version>
-      <auto-deploy>true</auto-deploy>
-      <configurations>
-        <config evaluator="string-compare" condition="WebFramework" replace="false">
-          <web-framework>
-            <dojo-pages>
-              <packages>
-                <package name="tutorials" location="resources/alf-person-region-share-jar/js/tutorials"/>
-              </packages>
-            </dojo-pages>
-          </web-framework>
-        </config>
-      </configurations>
-    </module>
-  </modules>
+	<modules>
+		<module>
+			<id>alf-person-region-share-jar - Example Aikau Widgets</id>
+			<version>1.0</version>
+			<auto-deploy>true</auto-deploy>
+			<configurations>
+				<config evaluator="string-compare" condition="WebFramework"
+					replace="false">
+					<web-framework>
+						<dojo-pages>
+							<packages>
+								<package name="tutorials"
+									location="resources/alf-person-region-share-jar/js/tutorials" />
+							</packages>
+						</dojo-pages>
+					</web-framework>
+				</config>
+			</configurations>
+
+            <!-- override webscript -->
+			<customizations>
+				<!-- region user menu -->
+				<customization>
+					<targetPackageRoot>org.alfresco.share.header</targetPackageRoot>
+					<sourcePackageRoot>com.acme.share.header</sourcePackageRoot>
+				</customization>
+				
+                <!-- Edit Properties page title -->
+                <customization>
+                    <targetPackageRoot>org.alfresco.components.edit-metadata</targetPackageRoot>
+                    <sourcePackageRoot>com.acme.components.edit-metadata</sourcePackageRoot>
+                </customization>
+			</customizations>
+		</module>
+	</modules>
 </extension>

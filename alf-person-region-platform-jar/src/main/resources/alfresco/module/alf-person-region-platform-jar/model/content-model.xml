@@ -2,8 +2,8 @@
 <model name="acme:contentModel" xmlns="http://www.alfresco.org/model/dictionary/1.0">
 
     <!-- Optional meta-data about the model -->
-    <description>Sample Document Model</description>
-    <author>My Name</author>
+    <description>ACME Document Model</description>
+    <author>Zhihai Liu</author>
     <version>1.0</version>
 
     <imports>
@@ -78,6 +78,23 @@
                     <constraints>
                         <constraint ref="acme:securityClassificationOptions"/>
                     </constraints>
+                </property>
+            </properties>
+        </aspect>
+        
+        <!-- Regional aspect -->
+        <aspect name="acme:regional">
+            <title>Regional</title>
+            <properties>
+                <property name="acme:region">
+                    <type>d:category</type>
+                    <mandatory>true</mandatory>
+                    <multiple>false</multiple>
+                    <index enabled="true">
+                        <atomic>false</atomic>
+                        <stored>false</stored>
+                        <tokenised>false</tokenised>
+                    </index>
                 </property>
             </properties>
         </aspect>

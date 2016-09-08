@@ -15,3 +15,15 @@ hs_err_pid*
 .settings/
 .project
 .classpath
+
+# Maven
+target/
+
+# Alfresco
+alf_data_dev/
+alfresco.log
+alfresco.log.*
+share.log
+share.log.*
+solr.log
+solr.log.*
